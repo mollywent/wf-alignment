@@ -1,7 +1,6 @@
 process combine {
     label "wfalignment"
     cpus 1
-    memory "2 GB"
     input: path "reference*.fasta"
     output:
         path outfname, emit: fasta
@@ -23,7 +22,6 @@ process combine {
 process fx2tab {
     label "wfalignment"
     cpus 1
-    memory { reference.size() > 1e9 ? "15 GB" : "2 GB" }
     input:
         path reference
     output:
