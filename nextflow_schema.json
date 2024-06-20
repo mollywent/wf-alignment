@@ -227,12 +227,10 @@
     },
     "resources": {
         "recommended": {
-            "cpus": 12,
-            "memory": "32GB"
+            "cpus": 12
         },
         "minimum": {
-            "cpus": 6,
-            "memory": "12GB"
+            "cpus": 6
         },
         "run_time": "0.5-5 minutes per sample (depending on number of reads, length of reference, and available compute).",
         "arm_support": true
