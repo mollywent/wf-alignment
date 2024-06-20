@@ -600,7 +600,7 @@ process validateIndex {
 process mergeBams {
     label "ingress"
     label "wf_common"
-    cpus 3
+    cpus 4
     input: tuple val(meta), path("input_bams/reads*.bam"), path("input_bams/reads*.bam.bai")
     output: tuple val(meta), path("reads.bam"), path("reads.bam.bai")
     script:
@@ -630,7 +630,7 @@ process catSortBams {
 process sortBam {
     label "ingress"
     label "wf_common"
-    cpus 3
+    cpus 4
     input: tuple val(meta), path("reads.bam")
     output: tuple val(meta), path("reads.sorted.bam"), path("reads.sorted.bam.bai")
     script:
@@ -644,7 +644,7 @@ process sortBam {
 process bamstats {
     label "ingress"
     label "wf_common"
-    cpus 3
+    cpus 4
     input:
         tuple val(meta), path("reads.bam"), path("reads.bam.bai")
         val bsargs
