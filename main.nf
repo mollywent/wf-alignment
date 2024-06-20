@@ -94,7 +94,7 @@ process addStepsColumn {
 process readDepthPerRef {
     // TODO: check if parallelisation with `xargs` or `parallel` is more efficient
     label "wfalignment"
-    cpus 3
+    cpus 4
     input:
         tuple val(meta), path(alignment), path(index)
         path ref_len
